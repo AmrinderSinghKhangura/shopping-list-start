@@ -56,7 +56,7 @@ function checkIfItemExists(item) {
   if (localStorage.getItem("items") === null) {
     return false;
   }
-  return JSON.parse(localStorage.getItem("items")).includes(item);
+  return JSON.parse(localStorage.getItem("items")).includes(item.toLowerCase());
 }
 
 const addButtonClicked = (e) => {
