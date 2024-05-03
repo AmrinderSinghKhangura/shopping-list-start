@@ -114,6 +114,13 @@ itemList.addEventListener("click", function (e) {
     e.target.parentElement.parentElement.remove();
   deleteFromStorage(e.target.parentElement.parentElement.textContent);
   CheckEmptyList();
+  addBtn.style.backgroundColor = "black";
+  addBtn.textContent = "Add item";
+  editMode = false;
+  itemList
+    .querySelectorAll(".edit-mode")
+    .forEach((item) => item.classList.remove("edit-mode"));
+  input.value = "";
 });
 
 //clear button
